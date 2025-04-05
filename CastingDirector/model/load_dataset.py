@@ -9,7 +9,7 @@ from torch.utils.data import Dataset, DataLoader
 from sklearn.model_selection import train_test_split
 from torch.utils.data import DataLoader
 
-df = pd.read_csv("imdb_top_1000.csv")
+df = pd.read_csv("./model/imdb_top_1000.csv")
 
 print(df.columns)
 
@@ -125,4 +125,4 @@ print(rating)
 from safetensors.torch import save_file
 
 # Save model weights
-save_file(model.state_dict(), "cast_rating_model.safetensors")
+save_file(model.state_dict(), "./model/cast_rating_model.safetensors")

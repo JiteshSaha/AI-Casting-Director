@@ -6,13 +6,13 @@ from model import CastRatingRegressor  # You can copy the model class to a separ
 import pickle
 
 # === Load label encoder ===
-df = pd.read_csv("imdb_top_1000.csv")
+df = pd.read_csv("./model/imdb_top_1000.csv")
 df = df[['Star1', 'Star2', 'Star3', 'Star4', 'Director']].dropna()
 
 all_names = pd.concat([df['Star1'], df['Star2'], df['Star3'], df['Star4'], df['Director']])
 
 # Then during prediction, load it:
-with open("label_encoder.pkl", "rb") as f:
+with open("./model/label_encoder.pkl", "rb") as f:
     label_encoder = pickle.load(f)
 
 # === Load model ===
@@ -20,7 +20,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 num_people = len(label_encoder.classes_)
 
 model = CastRatingRegressor(num_people=num_people)
-model.load_state_dict(load_file("cast_rating_model.safetensors"))
+model.load_state_dict(load_file("./model/cast_rating_model.safetensors"))
 model.to(device)
 model.eval()
 
