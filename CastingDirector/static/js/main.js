@@ -9,40 +9,6 @@ fetch("/static/stars.json")
     allStars = data;
   });
 
-// Search logic
-document.getElementById("search-box").addEventListener("input", function () {
-  const term = this.value.toLowerCase();
-  const results = allStars.filter(s => s.name.toLowerCase().includes(term));
-  displaySearchResults(results);
-});
-
-// Display search results
-function displaySearchResults(results) {
-  const container = document.getElementById("search-results");
-  container.innerHTML = "";
-
-  results.forEach(star => {
-    const card = document.createElement("div");
-    card.className = "actor-card";
-    card.draggable = true;
-
-    // Set all necessary data attributes
-    card.dataset.name = star.name;
-    card.dataset.image = star.image;
-    card.dataset.label = star.label;
-
-    card.innerHTML = `
-      <img src="${star.image}" alt="${star.name}" onerror="this.src='/static/default.jpg'" />
-      <div class="caption">
-        <strong>${star.name}</strong><br/>
-        <small>${star.label}</small>
-      </div>
-    `;
-
-    card.addEventListener("dragstart", dragStart);
-    container.appendChild(card);
-  });
-}
 
 // On drag start, store all necessary info in dataTransfer
 function dragStart(e) {
