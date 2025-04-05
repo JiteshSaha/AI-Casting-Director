@@ -15,7 +15,7 @@ safetensors==0.5.3
 setuptools==75.8.0
 sqlite==3.45.3 ; platform_system=="Windows"
 tk==8.6.14 ; platform_system=="Windows"
-tzdata==2025a
+tzdata==2025.2
 vc==14.42 ; platform_system=="Windows"
 vs2015_runtime==14.42.34433 ; platform_system=="Windows"
 werkzeug==3.1.3
