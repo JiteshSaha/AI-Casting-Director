@@ -9,11 +9,11 @@ app = Flask(__name__)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Load model & label encoder once
-with open(r"CastingDirector\model\label_encoder.pkl", "rb") as f:
+with open(r"./model/label_encoder.pkl", "rb") as f:
     label_encoder = pickle.load(f)
 
 model = CastRatingRegressor(num_people=len(label_encoder.classes_))
-model.load_state_dict(load_file(r"CastingDirector\model\cast_rating_model.safetensors"))
+model.load_state_dict(load_file(r"./model/cast_rating_model.safetensors"))
 model.to(device)
 model.eval()
 
