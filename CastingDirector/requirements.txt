@@ -1,0 +1,37 @@
+blinker==1.9.0
+bzip2==1.0.8 ; platform_system=="Windows"
+ca-certificates==2025.2.25 ; platform_system=="Windows"
+click==8.1.7
+colorama==0.4.6
+flask==3.1.0
+itsdangerous==2.2.0
+jinja2==3.1.6
+libffi==3.4.4 ; platform_system=="Windows"
+markupsafe==3.0.2
+openssl==3.0.16 ; platform_system=="Windows"
+pip==25.0
+python==3.11.11
+safetensors==0.5.3
+setuptools==75.8.0
+sqlite==3.45.3 ; platform_system=="Windows"
+tk==8.6.14 ; platform_system=="Windows"
+tzdata==2025a
+vc==14.42 ; platform_system=="Windows"
+vs2015_runtime==14.42.34433 ; platform_system=="Windows"
+werkzeug==3.1.3
+wheel==0.45.1
+xz==5.6.4 ; platform_system=="Windows"
+zlib==1.2.13 ; platform_system=="Windows"
+
+filelock==3.18.0
+fsspec==2025.3.2
+joblib==1.4.2
+mpmath==1.3.0
+networkx==3.4.2
+numpy==2.2.4
+scikit-learn==1.6.1
+scipy==1.15.2
+sympy==1.13.1
+threadpoolctl==3.6.0
+torch==2.6.0
+typing-extensions==4.13.1
