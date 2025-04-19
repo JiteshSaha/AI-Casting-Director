@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Casting Director Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+  <!-- Info Drawer & Hamburger -->
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="drawer-trigger">
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="info-drawer" id="infoDrawer">
+          <div class="info-content">
+            <h2>About This Game</h2>
+            <p>Drag actors and directors into the roles to build your dream cast and see the AI-powered predicted movie rating!</p>
+            <h3>🚀 Tech Stack</h3>
+            <ul>
+              <li><strong>Frontend:</strong> HTML, CSS, Vanilla JS</li>
+              <li><strong>Backend:</strong> Python Flask</li>
+              <li><strong>AI Model:</strong> Trained ML model using actor metadata</li>
+            </ul>
+            <div class="credits">
+              <h3>Credits</h3>
+              <p>Data provided by <a href="https://www.themoviedb.org/" target="_blank">TMDB</a>.</p>
+              <p>Model powered by <a href="https://pytorch.org/" target="_blank">PyTorch</a>.</p>
+            </div>
+            <p class="note">Hover the hamburger menu again to close this drawer.</p>
+          </div>
+        </div>
+      </div>
+      <h2>🎬 Build Your Cast</h2>
+    </div>
+    
+  
+  <!-- Main Layout -->
+  <div class="container">
+    <!-- Left: Play Area -->
+    <div class="play-area">
+      <div class="drop-zone-wrapper">
+        <div class="drop-zone drop-text" data-role="Star1">Star 1</div>
+        <div class="drop-zone drop-text" data-role="Star2">Star 2</div>
+        <div class="drop-zone drop-text" data-role="Star3">Star 3</div>
+        <div class="drop-zone drop-text" data-role="Star4">Star 4</div>
+        <div class="drop-zone drop-text" data-role="Director">Director</div>
+      </div>
+      <div class="rating-display">
+        <h3>🎯 Predicted Rating:</h3>
+        <div id="rating-value">--</div>
+        <div class="controls">
+          <button id="reset-button">🔄 Reset</button>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <!-- Right: Search Area -->
+    <div class="search-area">
+      <div class="search-header">
+        <h2>Search Actors</h2>
+        <input type="text" id="search-box" placeholder="Search...">
+      </div>
+      <div id="search-results">
+        <!-- Actor cards go here -->
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>
